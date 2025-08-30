@@ -1,0 +1,25 @@
+admin:Quantum Communicator|Advanced communication device with encryption|1
+admin:Energy Shield Generator|Personal shield that absorbs 50 damage|1
+admin:Neural Interface Chip|Direct neural connection to station systems|1
+captain:Command Badge|Official captain's insignia with security clearance|1
+captain:Tactical Scanner|Multi-spectrum scanning device|1
+captain:Emergency Beacon|Distress signal transmitter|1
+engineer:Repair Kit|Complete set of engineering tools|1
+engineer:Power Core|Portable energy source|1
+engineer:Diagnostic Scanner|Advanced system analysis tool|1
+security:Stun Baton|Non-lethal security weapon|1
+security:Security Clearance Card|Access to restricted areas|1
+security:Combat Armor|Lightweight protective gear|1
+medical:Med Kit|Complete medical supplies|1
+medical:Bio Scanner|Health monitoring device|1
+medical:Stasis Field Generator|Emergency medical stasis|1
+science:Research Tablet|Advanced data collection device|1
+science:Sample Containers|Sterile sample storage|1
+science:Analysis Module|Portable laboratory equipment|1
+cargo:Cargo Manifest|Digital inventory tracking|1
+cargo:Loading Equipment|Heavy lifting gear|1
+cargo:Storage Containers|Secure item storage|1
+guest:Visitor Badge|Temporary access pass|1
+admin:test|this is a test|1
+admin:Synthetic Protein Steak|Synthetic Protein Steak|1
+admin:Hydration Packets|Hydration Packets|10

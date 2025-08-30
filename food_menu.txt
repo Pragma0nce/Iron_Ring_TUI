@@ -1,0 +1,10 @@
+Synthetic Protein Steak|45
+Fresh Vegetables|25
+Space Coffee|15
+Nutrient Bars|20
+Hydration Packets|10
+Space Ice Cream|30
+Emergency Rations|35
+Fruit Preserves|40
+Bread Loaf|22
+Energy Drinks|18

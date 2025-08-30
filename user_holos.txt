@@ -1,0 +1,8 @@
+admin:1578
+captain:1500
+engineer:800
+security:1200
+medical:900
+science:750
+cargo:600
+guest:432

@@ -1,0 +1,9 @@
+admin:admin123:ADMIN
+captain:captain2024:COMMAND
+engineer:tech456:ENGINEERING
+security:secure789:SECURITY
+medical:med123:MEDICAL
+science:research321:SCIENCE
+cargo:cargo555:CARGO
+guest:visitor:GUEST
+jnori:jn:USER
