@@ -150,6 +150,3 @@ This terminal can be used to:
 - Verify file permissions allow reading and writing the text files
 - Make sure credit balances are properly formatted in `user_credits.txt`
 
-## License
-
-This is a D&D campaign tool - feel free to modify and use as needed for your game!
