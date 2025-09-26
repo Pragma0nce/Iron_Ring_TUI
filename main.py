@@ -82,7 +82,7 @@ def load_users():
     """Load user credentials from users.txt"""
     users = {}
     try:
-        with open('/opt/Iron_Ring_TUI-main/users.txt', 'r') as f:
+        with open('users.txt', 'r') as f:
             for line in f:
                 line = line.strip()
                 if line and ':' in line:
@@ -97,7 +97,7 @@ def load_permissions():
     """Load role permissions from permissions.txt"""
     permissions = {}
     try:
-        with open('/opt/Iron_Ring_TUI-main/permissions.txt', 'r') as f:
+        with open('permissions.txt', 'r') as f:
             for line in f:
                 line = line.strip()
                 if line and ':' in line:
@@ -112,7 +112,7 @@ def load_user_holos():
     """Load user credit balances from user_holos.txt"""
     holos = {}
     try:
-        with open('/opt/Iron_Ring_TUI-main/user_holos.txt', 'r') as f:
+        with open('user_holos.txt', 'r') as f:
             for line in f:
                 line = line.strip()
                 if line and ':' in line:
@@ -126,7 +126,7 @@ def load_user_holos():
 def save_user_holos(holos):
     """Save user credit balances to user_holos.txt"""
     try:
-        with open('/opt/Iron_Ring_TUI-main/user_holos.txt', 'w') as f:
+        with open('user_holos.txt', 'w') as f:
             for username, credit_amount in holos.items():
                 f.write(f"{username}:{credit_amount}\n")
         return True
@@ -283,7 +283,7 @@ def station_news():
     console.print(Panel("[bold cyan]STATION NEWS NETWORK[/bold cyan]", border_style="cyan"))
     
     try:
-        with open('/opt/Iron_Ring_TUI-main/news.txt', 'r') as f:
+        with open('news.txt', 'r') as f:
             news_articles = []
             for line in f:
                 line = line.strip()
@@ -333,7 +333,7 @@ def food_delivery():
     
     # Load food menu
     try:
-        with open('/opt/Iron_Ring_TUI-main/food_menu.txt', 'r') as f:
+        with open('food_menu.txt', 'r') as f:
             food_items = []
             for line in f:
                 line = line.strip()
@@ -380,7 +380,7 @@ def food_delivery():
                     console.print(f"\n[yellow]Your order will be delivered to your quarters within 30 minutes.[/yellow]")
 
                     try:
-                        with open('/opt/Iron_Ring_TUI-main/user_inventory.txt', 'a') as f:
+                        with open('user_inventory.txt', 'a') as f:
                             f.write(f"{current_user}:{selected_item}|{selected_item}|{quantity}\n")
                     except Exception as e:
                         console.print(f"[red]ERROR: Could not add item to inventory: {e}[/red]")
@@ -597,7 +597,7 @@ def view_maintenance_notes():
     console.print(Panel("[bold cyan]MAINTENANCE NOTES[/bold cyan]", border_style="cyan"))
     
     try:
-        with open('/opt/Iron_Ring_TUI-main/maintenance_notes.txt', 'r') as f:
+        with open('maintenance_notes.txt', 'r') as f:
             notes = []
             for line in f:
                 line = line.strip()
@@ -706,7 +706,7 @@ def view_inventory():
     
     # Load and display inventory
     try:
-        with open('/opt/Iron_Ring_TUI-main/user_inventory.txt', 'r') as f:
+        with open('user_inventory.txt', 'r') as f:
             user_items = []
             for line in f:
                 line = line.strip()
@@ -799,7 +799,7 @@ def add_inventory_item():
     
     # Add item to inventory file
     try:
-        with open('/opt/Iron_Ring_TUI-main/user_inventory.txt', 'a') as f:
+        with open('user_inventory.txt', 'a') as f:
             f.write(f"{current_user}:{item_name}|{description}|{quantity}\n")
         
         console.print(f"\n[bold bright_green]ITEM ADDED SUCCESSFULLY![/bold bright_green]")
@@ -818,7 +818,7 @@ def delete_inventory_item():
     
     # Load current inventory
     try:
-        with open('/opt/Iron_Ring_TUI-main/user_inventory.txt', 'r') as f:
+        with open('user_inventory.txt', 'r') as f:
             lines = f.readlines()
         
         user_items = []
@@ -875,7 +875,7 @@ def delete_inventory_item():
                     
                     if item_found:
                         # Write back the file without the deleted item
-                        with open('/opt/Iron_Ring_TUI-main/user_inventory.txt', 'w') as f:
+                        with open('user_inventory.txt', 'w') as f:
                             for line in new_lines:
                                 f.write(line + '\n')
                         
@@ -919,4 +919,5 @@ def main():
         exit_terminal()
 
 if __name__ == "__main__":
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     app()
