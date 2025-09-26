@@ -231,7 +231,7 @@ def main_menu():
             (1, "PERSONAL", "Personal Belongings, and Information"),
             (2, "STATION NEWS", "Latest news and announcements"),
             (3, "SHUTTLE STATUS", "Shuttle fleet status"),
-            (4, "FOOD DELIVERY", "Order food and supplies"),
+            (4, "STORE", "Order food and supplies"),
             (5, "BANK", "Credit management and transfers"),
             (6, "MAINTENANCE", "Maintenance systems and notes"),
             (7, "LOGOUT", "Return to login")
@@ -322,7 +322,7 @@ def shuttle_status():
 def food_delivery():
     """Food delivery system with credit deduction"""
     clear_screen()
-    console.print(Panel("[bold cyan]FOOD DELIVERY SYSTEM[/bold cyan]", border_style="cyan"))
+    console.print(Panel("[bold cyan]GOODS DELIVERY SYSTEM[/bold cyan]", border_style="cyan"))
     
     # Load user holos
     holos = load_user_holos()
@@ -342,12 +342,12 @@ def food_delivery():
                     food_items.append((item, int(price)))
         
         if not food_items:
-            console.print("[yellow]No food items available.[/yellow]")
+            console.print("[yellow]No items available.[/yellow]")
             Prompt.ask("\n[bold green]Press ENTER to return to main menu[/bold green]")
             return
         
         # Display food menu
-        food_table = Table(title="Available Food Items", box=box.ASCII2, border_style="cyan")
+        food_table = Table(title="Available Items", box=box.ASCII2, border_style="cyan")
         food_table.add_column("Item", style="bright_green")
         food_table.add_column("Price", style="yellow")
         food_table.add_column("Item #", style="white")
@@ -384,7 +384,7 @@ def food_delivery():
                             f.write(f"{current_user}:{selected_item}|{selected_item}|{quantity}\n")
                     except Exception as e:
                         console.print(f"[red]ERROR: Could not add item to inventory: {e}[/red]")
-                        Prompt.ask("\n[bold green]Press ENTER to return to food delivery menu[/bold green]")
+                        Prompt.ask("\n[bold green]Press ENTER to return to Item delivery menu[/bold green]")
                         return
                 else:
                     console.print("[red]ERROR: Could not process payment![/red]")
